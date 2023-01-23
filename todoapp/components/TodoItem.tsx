@@ -25,8 +25,8 @@ const TodoItem = (props: { todo: ITodo, onChange: any }) => {
         <button onClick={() => setIsEdit(false)}><code>Esc</code></button>
         <button onClick={editHandler}><code>Save</code></button>
       </> : <>
-        <input type="checkbox" checked={props.todo.isCompleted} onChange={updateHandler} />
-        <span className={props.todo.isCompleted ? "completed" : ""}>{props.todo.title}</span>
+        <input type="checkbox" checked={props.todo.is_completed} onChange={updateHandler} />
+        <span className={props.todo.is_completed ? "completed" : ""}>{props.todo.title}</span>
         <button onClick={() => setIsEdit(true)}><code>Edit</code></button>
         <button onClick={deleteHandler}><code>DEL</code></button>
       </>}
